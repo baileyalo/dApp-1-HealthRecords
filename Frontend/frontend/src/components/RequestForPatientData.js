@@ -3,32 +3,32 @@ import React, { useState, useEffect } from "react";
 const RequestForPatientData = (props) => {
   const apiUrl = props.apiUrl;
   const identity = props.identity;
-  // const dummyRecords = [
-  //   {
-  //     medicalRecordId: "MA-1001",
-  //     uploadedBy: "Doctor A",
-  //     dateUploaded: "01/01/01",
-  //     medicalRecordData:
-  //       "Deserunt adipisicing labore ut incididunt.Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
-  //     consentTo: ["DoctorA"],
-  //   },
-  //   {
-  //     medicalRecordId: "MA-1003",
-  //     uploadedBy: "Doctor B",
-  //     dateUploaded: "01/01/01",
-  //     medicalRecordData:
-  //       "Deserunt adipisicing labore ut incididunt.Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
-  //     consentTo: ["DoctorB", "DoctorA"],
-  //   },
-  //   {
-  //     medicalRecordId: "MA-1004",
-  //     uploadedBy: "Doctor B",
-  //     dateUploaded: "01/01/01",
-  //     medicalRecordData:
-  //       "Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
-  //     consentTo: ["DoctorB", "DoctorA"],
-  //   },
-  // ];
+  const dummyRecords = [
+    {
+      medicalRecordId: "MA-1001",
+      uploadedBy: "Doctor A",
+       dateUploaded: "01/01/01",
+      medicalRecordData:
+        "Deserunt adipisicing labore ut incididunt.Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
+      consentTo: ["DoctorA"],
+   },
+     {
+       medicalRecordId: "MA-1003",
+       uploadedBy: "Doctor B",
+       dateUploaded: "01/01/01",
+       medicalRecordData:
+         "Deserunt adipisicing labore ut incididunt.Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
+       consentTo: ["DoctorB", "DoctorA"],
+     },
+    {
+       medicalRecordId: "MA-1004",
+       uploadedBy: "Doctor B",
+      dateUploaded: "01/01/01",
+       medicalRecordData:
+        "Exercitation eu nostrud ad cupidatat deserunt in excepteur sint proident laboris cupidatat.",
+      consentTo: ["DoctorB", "DoctorA"],
+   },
+  ];
 
   const [loading, setLoading] = useState(false);
   const [patientID, setPatientId] = useState("");
@@ -47,14 +47,14 @@ const RequestForPatientData = (props) => {
         console.log(data.data);
         setLoading(false);
       });
-    // props.setPatientRecords(dummyRecords);
+     props.setPatientRecords(dummyRecords);
   };
 
   return (
     <div className="container">
       <form>
         <fieldset>
-          <legend>Request Patient recrods by Id:</legend>
+          <legend>Request Patient records by Id:</legend>
           <input
             type="string"
             placeholder="Patient Id"

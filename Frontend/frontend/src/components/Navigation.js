@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <div className="participantsBar">
+       <h2>Health System</h2> 
       <Link className="participantsLabel" to="/Patient">
         Patient
       </Link>
