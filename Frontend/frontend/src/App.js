@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Patient from "./components/Patient";
 import DoctorA from "./components/DoctorA";
@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Navigation />
       <div className="mainPanel">
-        <Switch>
+        <Routes>
           <Route
             path="/Patient"
             render={(props) => (
@@ -47,7 +47,7 @@ function App() {
               />
             )}
           />
-        </Switch>
+        </Routes>
       </div>
     </BrowserRouter>
   );
